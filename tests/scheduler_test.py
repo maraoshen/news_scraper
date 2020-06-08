@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import patch
 
-from scheduler import run_crawler, main
+from scheduler import run_crawler, main, LOOP_IN_SECONDS
 from news_scraper.spiders.news_spider import NewsSpider
 
 
@@ -22,5 +22,5 @@ class SchedulerTest(TestCase):
         main()
 
         mock_LoopingCall.assert_called_with(run_crawler)
-        mock_LoopingCall().start.assert_called_with(3)
+        mock_LoopingCall().start.assert_called_with(LOOP_IN_SECONDS)
         mock_run.assert_called_once()
