@@ -6,7 +6,7 @@ Create a virtual environment and install the requirements by running `pip instal
 
 ## Running the script
 Run the command `python scheduler.py [--loop SEC]`. 
-If loop argument is not provided, the script will run by default every 3 seconds.
+If loop argument is not provided, the script will run by default every 60 seconds.
 
 ## Adding url to be scraped
 On `news_scraper/spiders/news_spider.py` add the new url to `start_urls` list. 
